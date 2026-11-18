@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du An</title>
+</head>
+
+<body>
+    <div class="container">
+    <h1>Danh sach Project</h1>
+        <ul class="list-group list-group-numbered">
+            <li class="list-group-item active" th:each="p : ${projectList}">
+                <strong th:text="${p.id}"></strong> - <span th:text="${p.name}"></span> - <span th:text="${#lists.size(p.staffs)}"></span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

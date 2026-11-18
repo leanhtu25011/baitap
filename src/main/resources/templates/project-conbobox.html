@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du An</title>
+</head>
+
+<body>
+    <div class="container">
+		<select class="form-select" aria-label="Default select example" >
+            <option value="">---Chọn Danh Sach----</option>
+            <option th:each="p : ${projectList}" th:value ="${p.id}" th:text ="${p.name}"></option>
+        </select>
+    </div>
+</body>
+
+</html>
